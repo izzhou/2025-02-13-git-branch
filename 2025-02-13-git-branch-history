@@ -1,0 +1,155 @@
+Last login: Thu Feb 13 22:03:53 on ttys006
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 ~ % cd OneDrive/dsci310/practice  
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 practice % git clone https://github.com/izzhou/2025-02-13-git-branch.git
+Cloning into '2025-02-13-git-branch'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (5/5), done.
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 practice % cd 2025-02-13-git-branch 
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % code .
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git add README.md
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git commit -m "branch switch and log"
+[main 3eca1e4] branch switch and log
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/izzhou/2025-02-13-git-branch.git
+   93170fc..3eca1e4  main -> main
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git switch -c gitb1
+Switched to a new branch 'gitb1'
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git status
+On branch gitb1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git add README.md
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git commit -m "create branch and pull request"
+[gitb1 146ddd2] create branch and pull request
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git push origin gitb1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'gitb1' on GitHub by visiting:
+remote:      https://github.com/izzhou/2025-02-13-git-branch/pull/new/gitb1
+remote: 
+To https://github.com/izzhou/2025-02-13-git-branch.git
+ * [new branch]      gitb1 -> gitb1
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git status
+On branch gitb1
+nothing to commit, working tree clean
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 898 bytes | 449.00 KiB/s, done.
+From https://github.com/izzhou/2025-02-13-git-branch
+ * branch            main       -> FETCH_HEAD
+   3eca1e4..87a5fe7  main       -> origin/main
+Updating 3eca1e4..87a5fe7
+Fast-forward
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git switch gitb1
+Switched to branch 'gitb1'
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % merge main
+zsh: command not found: merge
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git merge main
+Updating 146ddd2..87a5fe7
+Fast-forward
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git push origin gitb1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/izzhou/2025-02-13-git-branch.git
+   146ddd2..87a5fe7  gitb1 -> gitb1
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git switch -c gitb2
+Switched to a new branch 'gitb2'
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git add README.md
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git commit -m "add and commit"
+[gitb2 ddf7327] add and commit
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git push origin gitb2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'gitb2' on GitHub by visiting:
+remote:      https://github.com/izzhou/2025-02-13-git-branch/pull/new/gitb2
+remote: 
+To https://github.com/izzhou/2025-02-13-git-branch.git
+ * [new branch]      gitb2 -> gitb2
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git switch -c gitb3
+Switched to a new branch 'gitb3'
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git add README.md
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git commit -m "push and pull"
+[gitb3 731d6c1] push and pull
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git push origin gitb3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'gitb3' on GitHub by visiting:
+remote:      https://github.com/izzhou/2025-02-13-git-branch/pull/new/gitb3
+remote: 
+To https://github.com/izzhou/2025-02-13-git-branch.git
+ * [new branch]      gitb3 -> gitb3
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git log --oneline
+731d6c1 (HEAD -> gitb3, origin/gitb3) push and pull
+87a5fe7 (origin/main, origin/gitb1, origin/HEAD, main, gitb1) Merge pull request #1 from izzhou/gitb1
+146ddd2 create branch and pull request
+3eca1e4 branch switch and log
+93170fc Initial commit
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git switch gitb2
+Switched to branch 'gitb2'
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git pull origin gitb3
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 872 bytes | 218.00 KiB/s, done.
+From https://github.com/izzhou/2025-02-13-git-branch
+ * branch            gitb3      -> FETCH_HEAD
+   731d6c1..2fb1f28  gitb3      -> origin/gitb3
+Updating ddf7327..2fb1f28
+Fast-forward
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git switch gitb3
+Switched to branch 'gitb3'
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % git rebase gitb2
+Successfully rebased and updated refs/heads/gitb3.
+(base) zhouzhiying_izzy@dhcp-128-189-128-171 2025-02-13-git-branch % 
