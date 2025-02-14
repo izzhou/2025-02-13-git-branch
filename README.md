@@ -1,6 +1,6 @@
 # 2025-02-13-git-branch
-- git branch
-- git switch
+- git add
+- git commit
 - git log --oneline --graph --all
 - branch
 - pull request
